@@ -1,0 +1,516 @@
+
+
+<body>
+	<div class = 'navbar'>
+		<a class="one" target="_blank" href="/index.html">Home</a>
+		|
+		<a class="one" target="_blank" href="/90785/index.html">Politics</a>
+		|
+		<a class="one" target="_blank" href="/business/index.html">Business</a>
+	</div>
+
+	<div class = 'quicknavbar'>
+	</div>
+
+
+	<div class = "news-board">
+
+<!-- USA PANEL -->
+		<div class = "panel">
+			
+			<h3 class = 'country-name'>
+				<a target='_blank' title='' href='http://www.usa.gov/visitors/about.shtml'>United States of America</a>
+			</h3>
+
+			<div class= 'panel-body'>
+				<header>World</header>
+
+				<ul><% @yahoo_news[@yahoo_news.length-3..@yahoo_news.length].each do |entry| %>
+					<li><a href= "<%= entry.url %>"><%= entry.title %></a></li>
+					<li><%= entry.summary %></li>
+					<% end %>
+				</ul>
+				
+					<div class= 'article-container'>
+						<a class= 'article-media' href='http://www.yahoo.com'>
+							<img width='100' height='70' src=''></img>
+						</a>
+						<div class='article-text'>
+							<a class='article-title' href=''>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</div>
+					</div>
+						<ul>
+							<li>
+								<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+								</a>
+								<div class='article-date'>
+								</div>
+							</li>
+							<li>
+								<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+								</a>
+								<div class='article-date'>
+								</div>
+							</li>
+							<li>
+								<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+								</a>
+								<div class='article-date'>
+								</div>
+							</li>
+							<li>
+								<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+								</a>
+								<div class='article-date'>
+								</div>
+							</li>
+						</ul>
+				<header>Domestic</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+						</li>
+						<li>
+						</li>
+					</ul>
+				<header>Opinion</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+						</li>
+						<li>
+						</li>
+					</ul>
+			</div>
+		</div>
+		
+<!-- RUSSIAN PANEL -->
+		<div class = 'panel'>
+			<h3 class = 'country-name'>
+				<a target='_blank' title='' href='http://www.russia.com'>Russia</a>
+			</h3>
+
+			<div class= 'panel-body'>
+				<header>World</header>
+
+				<ul><% @russian_times[@russian_times.length-3..@russian_times.length].each do |entry| %>
+					<li><a href= "<%= entry.url %>"><%= entry.title %></a></li>
+					<li><%= entry.summary %></li>
+					<% end %>
+				</ul>
+				
+					<div class= 'article-container'>
+						<a class= 'article-media' href='http://www.yahoo.com'>
+							<img width='100' height='70' src=''></img>
+						</a>
+						<div class='article-text'>
+							<a class='article-title' href=''>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Domestic</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Opinion</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+			</div>
+		</div>
+		
+
+<!-- CHINA PANEL -->
+		<div class = 'panel'>
+			<h3 class = 'country-name'>
+				<a target='_blank' title='' href='http://www.china.com'>China</a>
+			</h3>
+
+			<div class= 'panel-body'>
+
+			<header>World</header>
+			
+			<ul><% @peoples_daily[@peoples_daily.length-3..@peoples_daily.length].each do |entry| %>
+				<li><a href= "<%= entry.url %>"><%= entry.title %></a></li>
+				<li><%= entry.summary %></li>
+				<% end %>
+			</ul>
+
+				
+					<div class= 'article-container'>
+						<a class= 'article-media' href='http://www.yahoo.com'>
+							<img width='100' height='70' src=''></img>
+						</a>
+						<div class='article-text'>
+							<a class='article-title' href=''>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Domestic</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Opinion</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+			</div>
+		</div>
+<!-- INDIA PANEL -->
+		<div class = 'panel'>
+			<h3 class = 'country-name'>
+				<a target='_blank' title='' href='http://www.india.com'>India</a>
+			</h3>
+
+			<div class= 'panel-body'>
+				<header>World</header>
+				
+				<ul><% @times_of_india[@times_of_india.length-3..@times_of_india.length].each do |entry| %>
+				<li><a href= "<%= entry.url %>"><%= entry.title %></a></li>
+				<li><%= entry.summary %></li>
+				<% end %>
+				</ul>
+
+					<div class= 'article-container'>
+						<a class= 'article-media' href='http://www.yahoo.com'>
+							<img width='100' height='70' src=''></img>
+						</a>
+						<div class='article-text'>
+							<a class='article-title' href=''>Article Headline Here
+							</a>
+							<div class='article-date'></div>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Domestic</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Opinion</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+			</div>
+		</div>
+<!--new panel-->
+	<div class = 'panel'>
+			<h3 class = 'country-name'>
+				<a target='_blank' title='' href='http://www.usa.gov/visitors/about.shtml'>Germany</a>
+			</h3>
+
+			<div class= 'panel-body'>
+				<header>World</header>
+					<div class= 'article-container'>
+						<a class= 'article-media' href='http://www.yahoo.com'>
+							<img width='100' height='70' src=''></img>
+						</a>
+						<div class='article-text'>
+							<a class='article-title' href=''>Article Headline Here
+							</a>
+							<div class='article-date'></div>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Domestic</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Opinion</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+			</div>
+		</div>	
+<!--new panel-->	
+		<div class = 'panel'>
+			<h3 class = 'country-name'>
+				<a target='_blank' title='' href='http://www.usa.gov/visitors/about.shtml'>Germany</a>
+			</h3>
+
+			<div class= 'panel-body'>
+				<header>World</header>
+					<div class= 'article-container'>
+						<a class= 'article-media' href='http://www.yahoo.com'>
+							<img width='100' height='70' src=''></img>
+						</a>
+						<div class='article-text'>
+							<a class='article-title' href=''>Article Headline Here
+							</a>
+							<div class='article-date'></div>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Domestic</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				<header>Opinion</header>
+					<ul>
+						<li>
+							<a class='article-title' href='http://www.google.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+						<li>
+							<a class='article-title' href='http://www.bing.com' target=_blank>Article Headline Here
+							</a>
+							<div class='article-date'>
+							</div>
+						</li>
+					</ul>
+				</div>
+			
+		</div>
+
+
+
+	</div>
+
+
+
+</body>
+
