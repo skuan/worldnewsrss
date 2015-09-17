@@ -1,12 +1,15 @@
 require 'feedjira'
 require 'pry'
 require 'csv'
+require 'rubygems'
+require 'tf_idf'
+
 
 url_usa = %w[http://news.yahoo.com/rss/]
 feeds_usa = Feedjira::Feed.fetch_and_parse url_usa
 
 k_usa = feeds_usa.keys[0] # so i dont have to type in the key "http://rt.news/rss/news"
-binding.pry
+
 #console
 feeds_usa[k_usa].entries.each do |entry| #feeds_usa[k].entries = array of entries
 	puts "title: #{entry.title}"
@@ -19,7 +22,7 @@ end
 
 #database
 feeds_usa[k_usa].entries.each do |entry|
-	article = USA.create(title: entry.title, url: entry.url, author: entry.author, date: entry.published, summary: entry.summary )
+	article = Usa.create(title: entry.title, url: entry.url, author: entry.author, date: entry.published, summary: entry.summary )
 end
 
 #spreadsheet
@@ -30,4 +33,6 @@ CSV.open("yahoo_news_usa.csv", "wb") do |row|
 	end
 end
 
-@yahoo_news = USA.all
+@yahoo_news = Usa.all
+
+

@@ -2,10 +2,11 @@ class PagesController < ApplicationController
 
 require 'csv'
 
+
 	def home 
 
 	#RUSSIA PORTION
-		url_r = %w[http://rt.com/rss/news]
+		url_r = %w[http://www.rt.com/rss/news/]
 		feeds = Feedjira::Feed.fetch_and_parse url_r
 
 		k = feeds.keys[0] # so i dont have to type in the key "http://rt.news/rss/news"
@@ -37,7 +38,7 @@ require 'csv'
 
 
 	#CHINA PORTION
-		url_ch = %w[http://en.people.cn/rss/World.xml]
+		url_ch = %w[http://www.xinhuanet.com/english/rss/worldrss.xml]
 		feeds_ch = Feedjira::Feed.fetch_and_parse url_ch
 
 		k_ch = feeds_ch.keys[0] 
@@ -128,8 +129,16 @@ require 'csv'
 				row << [entry.title, entry.url, entry.author, entry.published, entry.summary]
 			end
 		end
-
+	
 		@yahoo_news = Usa.all
+
+
+
+	#GERMANY PORTION
+
+	#BRAZIL PORTION
+
+	#INDONESIA PORTION
 
 
 
